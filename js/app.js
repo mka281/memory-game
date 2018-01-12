@@ -48,8 +48,8 @@ function game() {
     $('#runner').runner('start');
     $('#runner').runner({
       format: function(value) {
-          let minute = parseInt(value/1000/60);
-          let second = parseInt(value/1000)
+          minute = parseInt(value/1000/60);
+          second = parseInt(value/1000)
           return (minute+":"+second);
       }
     });
@@ -60,7 +60,7 @@ function game() {
       $(".win-modal").css("display","block");
       $(".win-modal .stars").text(stars);
       $(".win-modal .moves").text(moves);
-      //$(".win-modal .runner").text(minute+":"+second);
+      $(".win-modal .runner").text(minute + ":" + second);
     }
   }
 
