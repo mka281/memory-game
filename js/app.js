@@ -56,7 +56,7 @@ function game() {
   }
 
   function checkWin() {
-    if (matchFound === 1) {
+    if (matchFound === 8) {
       $(".win-modal").css("display","block");
       $(".win-modal.stars").text(stars);
       $(".win-modal.moves").text(moves);
