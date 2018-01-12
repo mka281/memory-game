@@ -49,8 +49,8 @@ function game() {
     $('#runner').runner({
       format: function(value) {
           minute = parseInt(value/1000/60);
-          second = parseInt(value/1000)
-          return (minute+":"+second);
+          second = parseInt(value/1000 - minute*60);
+          return (minute + ":" +second);
       }
     });
   }
