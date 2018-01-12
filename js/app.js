@@ -13,11 +13,6 @@ const cards = [
 // Aarray to hold opened cards
 let openCards = [];
 
-// Game variables
-let moves = 0;
-let stars = 3;
-let matchFound = 0;
-
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -34,6 +29,11 @@ function shuffle(array) {
 }
 
 function game() {
+  // Game variables
+  let moves = 0;
+  let stars = 3;
+  let matchFound = 0;
+
   // Create each card's HTMl and add to the page
   function createCard() {
     $(".deck").empty();
@@ -58,9 +58,9 @@ function game() {
   function checkWin() {
     if (matchFound === 8) {
       $(".win-modal").css("display","block");
-      $(".win-modal.stars").text(stars);
-      $(".win-modal.moves").text(moves);
-      $(".win-modal.runner").text(minute+":"+second);
+      $(".win-modal .stars").text(stars);
+      $(".win-modal .moves").text(moves);
+      //$(".win-modal .runner").text(minute+":"+second);
     }
   }
 
@@ -142,6 +142,10 @@ $(".restart").click(function() {
   moves = 0;
   $(".moves").text(moves);
   stars = 3;
+  $(".stars").empty();
+  for (let i=0; i<3; i++) {
+    $(".stars").append(`<li><i class="fa fa-star"></i></li>`)
+  }
   matchFound = 0;
   // Start game again
   game();
