@@ -109,6 +109,7 @@ h1 {
 }
 
 .score-panel #runner {
+  display: none;
   margin: 0 40px;
 }
 

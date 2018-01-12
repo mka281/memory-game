@@ -45,6 +45,7 @@ function game() {
   createCard();
 
   function startGame() {
+    $("#runner").css("display","inline")
     $('#runner').runner('start');
     $('#runner').runner({
       format: function(value) {
@@ -57,6 +58,7 @@ function game() {
 
   function checkWin() {
     if (matchFound === 8) {
+      $("#runner").css("display","none")
       $(".win-modal").css("display","block");
       $(".win-modal .stars").text(stars);
       $(".win-modal .moves").text(moves);
