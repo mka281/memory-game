@@ -3,18 +3,32 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
+  * [How to run the game](#how-to-run-the-game)
+  * [How to play](#how-to-play)
 * [Contributing](#contributing)
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+* How to run the game
 
-To get started, open `js/app.js` and start building out the app's functionality
+  * Go to https://github.com/mka281/memory-game
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+* How to play
+
+  * Click a card to see its underlying symbol
+  * Click second card to check if the symbols are the same
+    * Move counter will increase by 1
+    * Stopwatch will start (on the first move)
+    * If symbols are not the same they will hide again
+    * If symbols are the same, they will be locked open
+  * You can click a new card, right after the check process finishes
+  * Continue until all the cards match
+  * If the move counter reaches to 13 or 21, you will loose 1 star
+  * You will see your results when all cards match, click to Play Again to restart the game.
+
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+* Pull requests are welcome for any improvements or bug fixes.
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+* For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
