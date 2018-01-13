@@ -28,6 +28,7 @@ function shuffle(array) {
     return array;
 }
 
+
 function game() {
   // Game variables
   let moves = 0;
@@ -42,8 +43,10 @@ function game() {
       $(".deck").append('<li class="card"><i class="fa fa-' + card + '"></i></li>');
     };
   }
+  // Create cards automatically
   createCard();
 
+  // Start runner (when first move happens)
   function startRunner() {
     $("#runner").css("display","inline")
     $('#runner').runner('start');
@@ -56,6 +59,7 @@ function game() {
     });
   }
 
+  // Check if game is finished after two cards match
   function checkWin() {
     if (matchFound === 8) {
       $("#runner").css("display","none")
@@ -66,6 +70,7 @@ function game() {
     }
   }
 
+  // Add match class and lock matched cards to page
   function addMatch() {
     openCards[0][0].classList.add("match");
     openCards[1][0].classList.add("match");
@@ -76,6 +81,7 @@ function game() {
     setTimeout(checkWin,600);
   }
 
+  // Hide again cards that do not match
   function removeClasses() {
     for (let i=0; i<openCards.length; i++ ) {
       openCards[i][0].classList.remove("open","show");
@@ -83,6 +89,7 @@ function game() {
     openCards = [];
   }
 
+  // Function to lose 1 star
   function decrementStars() {
     $(".stars i.fa-star").first()
     .removeClass("fa-star")
@@ -90,6 +97,7 @@ function game() {
     stars -= 1;
   }
 
+  // Function to increase move number
   function incrementMoves() {
     moves ++;
     $(".score-panel .moves").text(moves);
@@ -101,8 +109,8 @@ function game() {
     }
   }
 
+  // Event listener for card clicks
   function clickCard() {
-    // Event listenet for cards
     $(".card").click(function() {
       // Return the function if the card is open
       if ($(this).hasClass("open show")) {
@@ -126,18 +134,22 @@ function game() {
         } else {
           setTimeout(removeClasses,1300);
         }
-        // Increment moves after checking
+        // Increase moves after checking
         incrementMoves();
       }
     });
   }
   clickCard();
 }
+
+// Run game function
 game();
+
+// Add event to elements with restart class
 $(".restart").click(function() {
   // Close win-modal
   $(".win-modal").css("display","none");
-  // Change variables
+  // Change variables to the initial values
   moves = 0;
   $(".moves").text(moves);
   stars = 3;
