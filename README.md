@@ -9,11 +9,11 @@
 
 ## Instructions
 
-* How to run the game
+### How to run the game
 
   * Go to https://github.com/mka281/memory-game
 
-* How to play
+### How to play
 
   * Click a card to see its underlying symbol
   * Click second card to check if the symbols are the same
