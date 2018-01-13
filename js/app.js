@@ -44,7 +44,7 @@ function game() {
   }
   createCard();
 
-  function startGame() {
+  function startRunner() {
     $("#runner").css("display","inline")
     $('#runner').runner('start');
     $('#runner').runner({
@@ -118,9 +118,9 @@ function game() {
       // Display the card symbol and add the card to openCards list
       $(this).addClass("open show");
       openCards.push($(this));
-      // Start game if this is the first move
+      // Start runner if this is the first move
       if (moves === 0) {
-        startGame();
+        startRunner();
       }
       // Check if the cards match
       if (openCards.length === 2) {
