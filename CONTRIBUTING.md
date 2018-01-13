@@ -1,3 +1,3 @@
 # How to contribute
 
-The files in this repository are used as the starting point for all students. Because we want students to write the majority of the code themselves, pull requests (most likely) will _not_ be merged into the project.
+This project is part of Udacity Front-end Web Developer Nanodegree Program. As this is to show the improvements of my own Front-end skills, pull requests will not be merged to this project.

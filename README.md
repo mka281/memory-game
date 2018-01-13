@@ -29,6 +29,6 @@
 
 ## Contributing
 
-* Pull requests are welcome for any improvements or bug fixes.
+* Pull requests will not be merged as this is a personal project.
 
 * For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
