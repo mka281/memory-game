@@ -93,13 +93,10 @@ function game() {
   function incrementMoves() {
     moves ++;
     $(".score-panel .moves").text(moves);
-    if (moves === 14) {
+    if (moves === 13) {
       decrementStars();
     }
-    else if (moves === 20) {
-      decrementStars();
-    }
-    else if (moves === 28) {
+    else if (moves === 21) {
       decrementStars();
     }
   }
