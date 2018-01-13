@@ -107,10 +107,6 @@ function game() {
   function clickCard() {
     // Event listenet for cards
     $(".card").click(function() {
-      // Start game if this is the first move
-      if (moves === 0) {
-        startGame();
-      }
       // Return the function if the card is open
       if ($(this).hasClass("open show")) {
         return;
@@ -122,6 +118,10 @@ function game() {
       // Display the card symbol and add the card to openCards list
       $(this).addClass("open show");
       openCards.push($(this));
+      // Start game if this is the first move
+      if (moves === 0) {
+        startGame();
+      }
       // Check if the cards match
       if (openCards.length === 2) {
         if (openCards[0][0].firstChild.className === openCards[1][0].firstChild.className) {
